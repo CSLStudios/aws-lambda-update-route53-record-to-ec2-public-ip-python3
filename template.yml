@@ -19,9 +19,7 @@ Resources:
           - route53:ChangeResourceRecordSets
           Resource: '*'
           Effect: Allow
-      CodeUri:
-        Bucket: <%REPO_BUCKET%>
-        Key: 76504247-098c-413a-abff-aadd8a6de03f
+      CodeUri: src/aws-lambda-update-route53-record-to-ec2-public-ip-python3
       Runtime: python3.8
       Events:
         EC2StateChangeEvent:
